@@ -2,7 +2,7 @@ provider "linode" {
     token = var.linode_token
 }
 
-resource "linode_instance" "nicks_vm" {
+resource "linode_instance" "test-vm" {
     image = "linode/ubuntu20.04"
     authorized_keys = [var.ssh_key]
     region = "us-central"
