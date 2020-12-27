@@ -10,9 +10,9 @@ resource "digitalocean_ssh_key" "nick-ssh" {
   public_key = var.ssh_key
 }
 
-resource "digitalocean_droplet" "monitoring-server" {
+resource "digitalocean_droplet" "test-vm" {
   image    = "ubuntu-20-04-x64"
-  name     = "monitoring-server"
+  name     = "test-vm"
   region   = "nyc1"
   size     = "s-1vcpu-1gb"
   ssh_keys = [digitalocean_ssh_key.nick-ssh.fingerprint]
